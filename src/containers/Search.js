@@ -20,7 +20,7 @@ class Search extends React.Component {
 
   render(){
     return(
-      <React.Fragment>
+      <div className="searchForm">
         <Form onSubmit={this.handleSubmit}>
           <Form.Field>
             <label>
@@ -37,8 +37,8 @@ class Search extends React.Component {
           <Form.Field>
             <Button>Search</Button>
           </Form.Field>
-          </Form>
-        </React.Fragment>
+        </Form>
+      </div>
         )
   }
 }
