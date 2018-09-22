@@ -1,4 +1,5 @@
 import React from 'react'
+import {Button, Form} from 'semantic-ui-react'
 
 class Search extends React.Component {
 
@@ -20,19 +21,23 @@ class Search extends React.Component {
   render(){
     return(
       <React.Fragment>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Search
-            <input
-              type="text"
-              name="search"
-              placeholder="Enter a username to find information about a GitHub User"
-              value={this.state.userQuery}
-              onChange={this.handleChange}
-            />
-          </label>
-          <input type="submit" value="Search" />
-        </form>
+        <Form onSubmit={this.handleSubmit}>
+          <Form.Field>
+            <label>
+              Search
+              <input
+                type="text"
+                name="search"
+                placeholder="Enter a username to find information about a GitHub User"
+                value={this.state.userQuery}
+                onChange={this.handleChange}
+              />
+            </label>
+          </Form.Field>
+          <Form.Field>
+            <Button>Search</Button>
+          </Form.Field>
+          </Form>
         </React.Fragment>
         )
   }

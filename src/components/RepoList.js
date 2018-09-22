@@ -12,11 +12,18 @@ class RepoList extends React.Component{
     })
 
     return(
-      <div>
+      <div className="repoList">
         Most Recently Updated Repos
         {repoList.slice(0, 10)}
       </div>
     )
+  }
+  componentDidUpdate(){
+    fetch(`${this.props.user.repos_url}?sort=updated&direction=desc`)
+    .then(res => res.json())
+    .then(list => this.setState({
+      repoList: list
+    }))
   }
   componentDidMount(){
     fetch(`${this.props.user.repos_url}?sort=updated&direction=desc`)

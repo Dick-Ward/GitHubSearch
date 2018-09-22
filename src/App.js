@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
     <div>
-      <h1>The Hub Hub</h1>
+      <h1 className="title">The Hub Hub</h1>
       <Search fetchUser={this.fetchUser}/>
       {this.state.currentUser && <UserContainer user={this.state.currentUser}/>}
     </div>
