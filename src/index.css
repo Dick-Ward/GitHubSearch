@@ -9,3 +9,21 @@ body {
   max-height: 230px;
   border-radius: 10px;
 }
+
+.container {
+  margin-top: 40px;
+}
+
+.searchForm {
+  width: 60%;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+}
+
+.repoList {
+  position: absolute;
+  bottom: 20px;
+}
